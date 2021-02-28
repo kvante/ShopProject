@@ -23,4 +23,4 @@ class ProductSerializer(serializers.ModelSerializer):
 class CommentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comment
-        fields = ('title', 'text')
+        fields = ('title', 'text', 'image')
