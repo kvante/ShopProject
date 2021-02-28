@@ -1,16 +1,16 @@
 from rest_framework import serializers
-from .models import Product
+from .models import Product, Category, Type, Comment
 
 
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
-        model = Product
+        model = Category
         fields = ('name')
 
 
 class TypeSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Product
+        model = Type
         fields = ('name')
 
 
@@ -22,5 +22,5 @@ class ProductSerializer(serializers.ModelSerializer):
 
 class CommentSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Product
+        model = Comment
         fields = ('title', 'text')
