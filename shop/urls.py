@@ -2,7 +2,7 @@ from django.urls import path
 
 from .views import *
 
-from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView
+#from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView
 app_name = 'shop'
 
 
@@ -20,4 +20,8 @@ urlpatterns = [
     path('comment/delete', CommentDeleteView.as_view()),
     path('comment/update', CommentUpdateView.as_view()),
     path('comment/list', CommentListView.as_view()),
+    path('type/create', TypeCreateView.as_view()),
+    path('type/delete', TypeDeleteView.as_view()),
+    path('type/update', TypeUpdateView.as_view()),
+    path('type/list', TypeListView.as_view()),
 ]
